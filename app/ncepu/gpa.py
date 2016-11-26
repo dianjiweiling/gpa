@@ -99,18 +99,19 @@ class GPASpider(NoticeSpider):
         self.GPA = float(self.sum/self.credits)
 
     def spider(self):
-        if self.login():
-            self.process_info()
-            self.calculate_GPA()
-            return self.GPA
-        else:
-            return -100
+        return self.login()
+
 
 
 if __name__ == '__main__':
 
-    mySpider = GPASpider('201401400214','1123581321')
+    mySpider = GPASpider('201401400214',11)
     mySpider.spider()
     print 'The total point is: ', mySpider.sum
     print 'The total credits is: ', mySpider.credits
     print 'GPA = ', mySpider.GPA
+            #     self.process_info()
+        #     self.calculate_GPA()
+        #     return self.GPA
+        # else:
+        #     return -100

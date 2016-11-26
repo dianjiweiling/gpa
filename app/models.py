@@ -13,9 +13,10 @@ class Student(db.Model):
 class Info(db.Model):
 	__tablename__ = 'infos'
 	id = db.Column(db.Integer, primary_key=True)
-	student_name = db.Column(db.String(32))
 	gpa = db.Column(db.Float)
-	user_id = db.Column(db.Integer, db.ForeignKey('Student.id'))
+	user_id = db.Column(db.Integer, db.ForeignKey('students.id'))
 
 	def __repr__(self):
 		return '<Info %r>' % self.name
+
+

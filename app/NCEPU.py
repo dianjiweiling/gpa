@@ -35,12 +35,12 @@ class NoticeSpider:
 
             r1 = self.s.post(login_url, data=payload, headers=self.headers)
             rr = re.findall(u'输入的学号或密码不正确', r1.text)
-            if rr is not None:
+            if not rr:
                 return True
-            else: 
+            else:  
                 return False
-        except Exception, e:
-            pass
+        except:
+            return False
 
 
             
@@ -48,7 +48,7 @@ class NoticeSpider:
 
 if __name__ == '__main__':
     print 'hello, i am here'
-    spider = NoticeSpider(2014,123)
-    spider.login()
+    spider = NoticeSpider(201401400214,123)
+    print spider.login()
 
     
