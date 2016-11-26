@@ -6,9 +6,9 @@
 
 {% block page_content %}
 {% if yes %}
-<h1>{{ GPA }}</h1>
+<h2>Your GPA is {{ GPA }}</h2>
 {% endif %}
-{{ wtf.quick_form(form) }}
+{{ wtf.quick_form(form,extra_classes='form1') }}
 {% endblock %}
 
 {% block scripts %}

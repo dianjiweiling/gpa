@@ -6,12 +6,19 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
 }
 
+.container {
+  margin: 0 auto;
+}
 .main-content {
   width: 500px;
-  padding: 20px 20px 20px 20px;
-  border: 1px solid #dddddd;
-  margin: 30px auto 0 auto;
-  background: #ffffff;
+  padding: 25px;
+  margin: 0 auto;
+  background-color: rgba(0,0,0,0)
+}
+
+.control-label {
+  color: #FF5151
 }

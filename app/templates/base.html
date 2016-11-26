@@ -4,11 +4,28 @@
 
 {% block head %}
 {{ super() }}
-
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+<link rel="stylesheet" href="{{ url_for('static', filename='homework.css') }}" type="text/css">
 {% endblock %}
 
 {% block navbar %}
-
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+            </ul>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block content %}
@@ -19,8 +36,10 @@
         {{ message }}
     </div>
     {% endfor %}
-
-    {% block page_content %}{% endblock %}
+	<div class="main-content">
+		{% block page_content %}{% endblock %}
+	</div>
+    
 </div>
 {% endblock %}
 
