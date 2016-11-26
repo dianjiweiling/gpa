@@ -1,0 +1,17 @@
+body {
+  padding: 0 0 0 0;
+  background-color: #ffffff;
+  background-image: url(images/bg3-dark.jpg);
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.main-content {
+  width: 500px;
+  padding: 20px 20px 20px 20px;
+  border: 1px solid #dddddd;
+  margin: 30px auto 0 auto;
+  background: #ffffff;
+}

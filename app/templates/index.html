@@ -1,6 +1,16 @@
 {% extends "base.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
 
+{% block title %}GPA{% endblock %}
+
+
 {% block page_content %}
-{{ wtf.quick_form(form) }}
+{% if yes %}
+<h1>{{ GPA }}</h1>
+{% endif %}
+{{ wtf.quick_form(form,form_type="horizontal", horizontal_columns=('lg', 2, 8)) }}
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
 {% endblock %}
