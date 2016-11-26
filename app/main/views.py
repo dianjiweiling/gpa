@@ -18,8 +18,8 @@ def index():
         if session['GPA'] > 0:
             session['yes'] = True
             student = Student(student_id=form.nameid.data)
-            # info = Info(gpa=session['GPA'], student=student)
-            db.session.add_all([student])
+            info = Info(gpa=session['GPA'], student=student)
+            db.session.add_all([student, info])
             db.session.commit()
         else:
             flash(u'Your ID or Password is WRONG~')
