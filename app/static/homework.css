@@ -13,7 +13,7 @@ body {
   margin: 0 auto;
 }
 .main-content {
-  width: 500px;
+  width: 0 auto;
   padding: 25px;
   margin: 0 auto;
   background-color: rgba(0,0,0,0)
@@ -22,3 +22,4 @@ body {
 .control-label {
   color: #FF5151
 }
+
