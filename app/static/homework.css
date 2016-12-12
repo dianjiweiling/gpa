@@ -2,7 +2,7 @@ body {
   padding: 0 0 0 0;
   background-color: #ffffff;
   background-image: url(images/bg3-dark.jpg);
-  background-position: top left;
+  background-position: top, left, bottom, right;
   background-repeat: no-repeat;
   background-size: cover;
   font-family: Helvetica, Arial, sans-serif;
@@ -12,14 +12,18 @@ body {
 .container {
   margin: 0 auto;
 }
-.main-content {
+/*.main-content {
   width: 0 auto;
   padding: 25px;
   margin: 0 auto;
   background-color: rgba(0,0,0,0)
-}
+}*/
 
 .control-label {
   color: #FF5151
 }
+.header {
+  padding: 0 0 0 0;
+  margin: 0 auto;
 
+}
