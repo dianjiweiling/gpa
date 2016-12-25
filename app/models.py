@@ -8,7 +8,7 @@ class Student(db.Model):
 	users = db.relationship('Info', backref='student', lazy='dynamic')
 
 	def __repr__(self):
-		return '<Student %r>' % self.name
+		return '<Student %r>' % self.student_id
 
 class Info(db.Model):
 	__tablename__ = 'infos'
@@ -17,6 +17,6 @@ class Info(db.Model):
 	user_id = db.Column(db.Integer, db.ForeignKey('students.id'))
 
 	def __repr__(self):
-		return '<Info %r>' % self.name
+		return '<Info %r>' % self.user_id
 
 

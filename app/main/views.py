@@ -17,12 +17,18 @@ def index():
         print session['GPA']
         if session['GPA'] > 0:
             session['yes'] = True
-            student = Student.query.filter_by(student_id=form.nameid.data).first()
-            if student is None:
+            students = Student.query.filter_by(student_id=form.nameid.data).first()
+            if students is None:
+                print "student is None"
                 student = Student(student_id=form.nameid.data)
                 info = Info(gpa=session['GPA'], student=student)
                 db.session.add_all([student, info])
                 db.session.commit()
+            else:
+                print "-----student------------"
+                print type(students)
+                print students
+                print "-----------------"
         else:
             flash(u'Your ID or Password is WRONG~')
             session['yes'] = False
